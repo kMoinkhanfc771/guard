@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.5.1/cdn.min.js" defer></script>
+</head>
+<body class="overflow-x-hidden">
+ <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-3xl font-bold">GUARDER</h1>
+    <div x-data="{ open: false }" class="md:hidden">
+        <button @click="open = !open" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <div x-show="open" @click.away="open = false" class="absolute bg-gray-800 w-full left-0 top-full">
+            <nav>
+                <ul class="flex flex-col items-center">
+                    <li><a href="#" class="block py-2 text-yellow-500">Home</a></li>
+                    <li><a href="#" class="block py-2">Services</a></li>
+                    <li><a href="#" class="block py-2">About</a></li>
+                    <li><a href="#" class="block py-2">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <nav class="hidden md:block">
+        <ul class="flex space-x-4">
+            <li><a href="#" class="text-yellow-500">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="relative">
+    <img src="hero-bg.jpg" alt="" class="w-full h-screen object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
+        <h1 class="text-4xl font-bold">YOUR SAFETY <span class="text-yellow-500">OUR RESPONSIBILITY</span></h1>
+        <p class="mt-4 text-center max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, voluptatibus. Provident, blanditiis eligendi. Nemo cupiditate et explicabo vero!</p>
+        <div class="mt-4 space-x-4">
+            <button class="bg-yellow-500 py-2 px-4 rounded">Read More</button>
+            <button class="bg-blue-500 py-2 px-4 rounded">Get A Quote</button>
+        </div>
+        <div class="absolute bottom-4 flex space-x-4">
+            <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
+            <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
+            <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
+        </div>
+    </div>
+</div>
+
+
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto flex flex-wrap items-center">
+            <div class="w-full md:w-1/2 p-4">
+                <img src="about-img.jpg" alt="" class="w-full rounded shadow-md">
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+                <h1 class="text-3xl font-bold mb-4">WHO ARE WE?</h1>
+                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias officia harum laudantium quo est nobis nesciunt, aspernatur consequatur quas? Laboriosam maxime saepe odio exercitationem molestiae alias, eum voluptas distinctio praesentium, non rerum quidem libero fugit nihil minima incidunt officiis!</p>
+                <button class="bg-yellow-500 py-2 px-4 rounded">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold mb-8">OUR SERVICES</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow-md">
+                    <img src="favicon.png" alt="" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-4">HOME SECURITY</h3>
+                    <p class="mb-4">Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.</p>
+                    <button class="bg-yellow-500 py-2 px-4 rounded">Read More</button>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md">
+                    <img src="secuirity.png.png" alt="" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-4">OFFICE SECURITY</h3>
+                    <p class="mb-4">Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.</p>
+                    <button class="bg-yellow-500 py-2 px-4 rounded">Read More</button>
+                </div>
+                <div class="bg-white p-6 rounded shadow-md">
+                    <img src="gps_5616461.png" alt="" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-4">BODYGUARD</h3>
+                    <p class="mb-4">Minima consequatur architecto eaque assumenda ipsam itaque quia eum in doloribus debitis impedit ut minus tenetur corrupti excepturi ullam.</p>
+                    <button class="bg-yellow-500 py-2 px-4 rounded">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold mb-8">WHAT OUR CLIENTS SAY</h1>
+            <div class="flex items-center justify-center space-x-4">
+                <div class="text-4xl cursor-pointer">&lt;</div>
+                <div class="w-32 h-32 rounded-full overflow-hidden">
+                    <img src="client.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="text-4xl cursor-pointer">&gt;</div>
+            </div>
+            <h3 class="text-xl font-bold mt-4">Minim Veniam</h3>
+            <p class="mt-4 max-w-xl mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold mb-8">GET IN TOUCH</h1>
+            <form class="space-y-4">
+                <input type="text" placeholder="FULL NAME" class="w-full p-2 border rounded">
+                <input type="email" placeholder="EMAIL OR ADDRESS" class="w-full p-2 border rounded">
+                <input type="number" placeholder="PHONE NUMBER" class="w-full p-2 border rounded">
+                <textarea placeholder="MESSAGE" class="w-full p-2 border rounded"></textarea>
+                <button class="bg-blue-500 py-2 px-4 rounded text-white">SEND</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold mb-8">OUR GUARDS</h1>
+            <p class="mb-8">Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-4 rounded shadow-md">
+                    <div class="w-full h-96 overflow-hidden rounded-t">
+                        <img src="t1.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Martin Anderson</h3>
+                        <p>Supervisor</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <div class="w-full h-96 overflow-hidden rounded-t">
+                        <img src="t2.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Denny Butler</h3>
+                        <p>Supervisor</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                    <div class="w-full h-96 overflow-hidden rounded-t">
+                        <img src="t3.jpg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Nathan Mcpherson</h3>
+                        <p>Supervisor</p>
+                    </div>
+                </div>
+            </div>
+            <button class="mt-8 bg-yellow-500 py-2 px-4 rounded">View All</button>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="footer1">
+                <h1 class="text-2xl font-bold mb-4">Guarder</h1>
+                <p>dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r</p>
+            </div>
+            <div class="footer2">
+                <h1 class="text-2xl font-bold mb-4">Useful Link</h1>
+                <p>dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r</p>
+            </div>
+            <div class="footer3">
+                <h1 class="text-2xl font-bold mb-4">Contact Us</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>call: +011234567890</p>
+                <p>DemoGmail.com</p>
+            </div>
+            <div class="footer4">
+                <h1 class="text-2xl font-bold mb-4">Newsletter</h1>
+                <div class="flex flex-col">
+                    <input type="email" placeholder="Enter Your Email" class="p-2 mb-2 text-gray-900 rounded">
+                    <button class="bg-yellow-500 text-gray-900 py-2 rounded">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-8">© 2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    </body>
+    </html>
+        
+               
